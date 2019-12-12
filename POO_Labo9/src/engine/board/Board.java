@@ -7,6 +7,7 @@ package engine.board;
 
 import chess.ChessController;
 import chess.ChessView;
+import engine.pieces.*;
 
 /**
  *
@@ -14,10 +15,13 @@ import chess.ChessView;
  */
 public class Board implements ChessController{
     
+    private Piece[][] pieces;
     
     @Override
     public void newGame(){
         /**/
+        
+        
     };
     
     @Override

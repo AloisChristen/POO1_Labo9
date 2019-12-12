@@ -5,7 +5,7 @@
  */
 package engine.pieces;
 
-import engine.board.Case;
+import engine.board.Cell;
 
 /**
  *
@@ -18,7 +18,7 @@ public class Bishop extends Piece{
     }
 
     @Override
-    public boolean isMoveLegal(Case from, Case to) {
+    public boolean isMoveLegal(Cell from, Cell to) {
         return super.isMoveLegal(from, to);
     }
     

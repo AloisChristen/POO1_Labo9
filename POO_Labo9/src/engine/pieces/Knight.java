@@ -5,10 +5,25 @@
  */
 package engine.pieces;
 
+import engine.board.Cell;
+
 /**
  *
  * @author Alois
  */
-public class Knight {
+public class Knight extends Piece{
+
+    private boolean hasMoved;
+    
+    public Knight() {
+        super(null, null);
+        hasMoved = false;
+    }
+
+    @Override
+    public boolean isMoveLegal(Cell from, Cell to) {
+        return super.isMoveLegal(from, to);
+    }
+    
     
 }

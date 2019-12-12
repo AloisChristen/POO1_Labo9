@@ -5,10 +5,22 @@
  */
 package engine.pieces;
 
+import engine.board.Cell;
+
 /**
  *
  * @author Alois
  */
-public class King {
+public class King extends Piece{
+
+    public King() {
+        super(null, null);
+    }
+
+    @Override
+    public boolean isMoveLegal(Cell from, Cell to) {
+        return super.isMoveLegal(from, to);
+    }
+    
     
 }

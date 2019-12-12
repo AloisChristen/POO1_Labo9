@@ -5,10 +5,25 @@
  */
 package engine.pieces;
 
+import engine.board.Cell;
+
 /**
  *
  * @author Alois
  */
-public class Pawn {
+public class Pawn extends Piece{
+    
+    private boolean hasMoved;
+
+    public Pawn() {
+        super(null, null);
+        hasMoved = false;
+    }
+
+    @Override
+    public boolean isMoveLegal(Cell from, Cell to) {
+        return super.isMoveLegal(from, to); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
 }

@@ -7,7 +7,7 @@ package engine.pieces;
 
 import chess.PlayerColor;
 import chess.PieceType;
-import engine.board.Case;
+import engine.board.Cell;
 
 /**
  *
@@ -16,18 +16,16 @@ import engine.board.Case;
 public abstract class Piece {
     
     private final PlayerColor color;
-    private PieceType type; // Un pion peut se transformer
     
     public Piece(PlayerColor _color, PieceType _type){
         this.color = _color;
-        this.type = _type;
     }
     
     public boolean isWhite(){
         return this.color == PlayerColor.WHITE;
     }
     
-    public boolean isMoveLegal(Case from, Case to){
+    public boolean isMoveLegal(Cell from, Cell to){
         return false;
     }
 }
