@@ -5,6 +5,8 @@
  */
 package engine.pieces;
 
+import chess.PieceType;
+import chess.PlayerColor;
 import engine.board.Cell;
 
 /**
@@ -13,8 +15,11 @@ import engine.board.Cell;
  */
 public class King extends Piece{
 
-    public King() {
-        super(null, null);
+    private boolean hasMoved;
+    
+    public King(PlayerColor color) {
+        super(color);
+        hasMoved = false;
     }
 
     @Override
@@ -22,5 +27,7 @@ public class King extends Piece{
         return super.isMoveLegal(from, to);
     }
     
-    
+    public PieceType getType(){
+        return PieceType.KING;
+    }
 }

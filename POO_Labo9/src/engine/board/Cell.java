@@ -14,6 +14,8 @@ public class Cell {
     public final int col;
     
     Cell(int _row, int _col){
+        if(_row < 0 || _row >= 8 || _col < 0 || _col >= 8)
+            throw new RuntimeException("Cell not on the board, check position");
         row = _row;
         col = _col;
     }

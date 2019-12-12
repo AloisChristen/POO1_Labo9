@@ -17,7 +17,7 @@ public abstract class Piece {
     
     private final PlayerColor color;
     
-    public Piece(PlayerColor _color, PieceType _type){
+    public Piece(PlayerColor _color){
         this.color = _color;
     }
     
@@ -27,5 +27,17 @@ public abstract class Piece {
     
     public boolean isMoveLegal(Cell from, Cell to){
         return false;
+    }
+    
+    public boolean isMovePossible(Cell from, Cell to){
+        return false;
+    }
+    
+    public void moveFromTo(Cell from, Cell to){
+    
+    }
+    
+    public PieceType getType(){
+        return null;
     }
 }

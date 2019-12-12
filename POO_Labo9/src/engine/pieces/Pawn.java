@@ -5,6 +5,8 @@
  */
 package engine.pieces;
 
+import chess.PieceType;
+import chess.PlayerColor;
 import engine.board.Cell;
 
 /**
@@ -15,8 +17,8 @@ public class Pawn extends Piece{
     
     private boolean hasMoved;
 
-    public Pawn() {
-        super(null, null);
+    public Pawn(PlayerColor color) {
+        super(color);
         hasMoved = false;
     }
 
@@ -25,5 +27,7 @@ public class Pawn extends Piece{
         return super.isMoveLegal(from, to); //To change body of generated methods, choose Tools | Templates.
     }
     
-    
+    public PieceType getType(){
+        return PieceType.PAWN;
+    }
 }

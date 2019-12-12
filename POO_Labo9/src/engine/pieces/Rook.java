@@ -5,7 +5,9 @@
  */
 package engine.pieces;
 
+import chess.PieceType;
 import engine.board.Cell;
+import chess.PlayerColor;
 
 /**
  *
@@ -15,8 +17,8 @@ public class Rook extends Piece{
     
     private boolean hasMoved;
 
-    public Rook() {
-        super(null, null);
+    public Rook(PlayerColor color) {
+        super(color);
         hasMoved = false;
     }
 
@@ -24,7 +26,10 @@ public class Rook extends Piece{
     public boolean isMoveLegal(Cell from, Cell to) {
         return super.isMoveLegal(from, to);
     }
-     
+    
+    public PieceType getType(){
+        return PieceType.ROOK;
+    }
     
     
 }

@@ -5,6 +5,8 @@
  */
 package engine.pieces;
 
+import chess.PieceType;
+import chess.PlayerColor;
 import engine.board.Cell;
 
 /**
@@ -13,8 +15,8 @@ import engine.board.Cell;
  */
 public class Bishop extends Piece{
 
-    public Bishop() {
-        super(null, null);
+    public Bishop(PlayerColor color) {
+        super(color);
     }
 
     @Override
@@ -22,5 +24,7 @@ public class Bishop extends Piece{
         return super.isMoveLegal(from, to);
     }
     
-    
+    public PieceType getType(){
+        return PieceType.BISHOP;
+    }
 }
